@@ -127,6 +127,7 @@
     <ClCompile Include="实验三.cpp" />
     <ClCompile Include="实验二.cpp" />
     <ClCompile Include="实验四.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

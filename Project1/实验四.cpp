@@ -1,9 +1,9 @@
-/*
 #include<cstdio>
 #include<iostream>
 #include<graphics.h>
 #include<conio.h>
-
+#include<ctime>
+#include<glut.h>
 using namespace std;
 
 const int bs = 6;
@@ -16,11 +16,18 @@ typedef struct ET {
 struct point
 {
 	float x, y;
-}polypoint[bs] = { 370,10,560,100,560,200,430,130,340,170,340,80 };
+}polypoint[bs] = { 300,200,400,150,400,400,300,500,200,400,200,150 };
 
 int ymax = 0;
 int ymin = 2000;
 
+//时间延时函数
+void delay(int time)
+{
+	clock_t   now = clock();
+
+	while (clock() - now < time);
+}
 
 int main() {
 	initgraph(600, 600);
@@ -126,20 +133,17 @@ int main() {
 		//填充
 		p = pAET->next;
 		while (p != NULL && p->next != NULL) {
-			for (float j = p->x; j <= p->next->x; j++) {
-				int j0 = int(j);
-				putpixel(j0, i, RGB(255, 0, 0));
-				Sleep(1);
-
+			for (int j = p->x; j <= p->next->x; j++) {
+				putpixel(j, i, RGB(255, 0, 0));
+				//delay(1);
 			}
-
+			//delay(1);
 			p = p->next->next;
 		}
 
 
 	}
-	
 	_getch();
 	closegraph();
 	return 0;
-}*/
+}
