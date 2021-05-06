@@ -112,7 +112,7 @@
 //void line(Point2D p0, Point2D p1)
 //{
 //	if (p0.num == 0) {
-//		co[0] = 0.7;
+//		co[0] = 0.6;
 //		co[1] = 0;
 //		co[2] = 0;
 //		co[3] = 0.5;
@@ -121,7 +121,7 @@
 //	}
 //	else {
 //		co[0] = 0;
-//		co[1] = 0.7;
+//		co[1] = 0.6;
 //		co[2] = 0;
 //		co[3] = 0;
 //		co[4] = 0.5;
@@ -142,10 +142,10 @@
 //		for (p = p0; p.y < p1.y; p.y++)//主移动方向->y,不包括p1
 //		{
 //			if (p0.num == 0) {
-//				glColor3f(4, 0, 0);
+//				glColor3f(1, 0, 0);
 //			}
 //			else {
-//				glColor3f(0, 4, 0);
+//				glColor3f(0, 1, 0);
 //			}
 //			glVertex2f(p.x, p.y);
 //		}
@@ -263,10 +263,10 @@
 //	glClear(GL_COLOR_BUFFER_BIT);
 //	for (int i = 0; i < poi.size(); i++) {
 //		if (poi[i].num == 0) {
-//			glColor3f(4, 0, 0);
+//			glColor3f(1, 0, 0);
 //		}
 //		if (poi[i].num == 1) {
-//			glColor3f(0, 4, 0);
+//			glColor3f(0, 1, 0);
 //		}
 //		glVertex2d(poi[i].x, poi[i].y);
 //	}

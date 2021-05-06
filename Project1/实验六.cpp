@@ -86,7 +86,7 @@ void bezier()
 {
 	out.clear();	//最后要输出bezier曲线上的点
 	int num = control.size();
-	for (double t = 0; t <= 1; t += 0.005 / num) {
+	for (double t = 0; t <= 1; t += 0.005 / num) {	//Bezier的de Casteljau递推算法
 		for (int i = 1; i < num; i++) {
 			for (int j = 0; j < num - i; j++) {
 				if (i == 1) {
@@ -108,7 +108,7 @@ int zuijin(int x, int y) {
 	double minx = 0x3f3f3f3f;
 	for (int i = 0; i < control.size(); i++) {
 		double temp = sqrt(pow(x - control[i].x, 2) + pow(y - control[i].y, 2));
-		if (temp < minx && temp < 8) {
+		if (temp < minx && temp < 30) {
 			minx = temp;
 			ans = i;
 		}
@@ -117,17 +117,17 @@ int zuijin(int x, int y) {
 }
 
 void mymouse(int button, int state, int x, int y) {
-	if (flag == 1) {	//insert point
+	if (flag == 1) {	//插入点
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
 			point temp = { x,h - y };
 			control.push_back(temp);
 			control0 = control;
-			//bezier();
-			byt();
+			if (mode == 1) bezier();
+			else byt();
 			glutPostRedisplay();
 		}
 	}
-	if (flag == 2) {	//delete the last point
+	if (flag == 2) {	//删除点
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
 			int dp = zuijin(x, h - y);	//找到离鼠标点击最近的点
 			if (dp == -1) {
