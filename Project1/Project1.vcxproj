@@ -123,7 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arcball.cpp" />
     <ClCompile Include="实验一.cpp" />
+    <ClCompile Include="实验七.cpp" />
+    <ClCompile Include="实验七1.cpp" />
     <ClCompile Include="实验三.cpp" />
     <ClCompile Include="实验二.cpp" />
     <ClCompile Include="实验五.cpp" />
@@ -132,7 +135,13 @@
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bumpy.off" />
+    <None Include="bunny.off" />
+    <None Include="cube.off" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arcball.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,8 +36,31 @@
     <ClCompile Include="实验六.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="实验七.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arcball.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="实验七1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="bumpy.off">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="bunny.off">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="cube.off">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arcball.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
